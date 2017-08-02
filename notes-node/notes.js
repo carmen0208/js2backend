@@ -7,7 +7,3 @@ module.exports.addNote = () => {
   return 'New Notes';
 };
 
-module.exports.add = (a, b) => {
-  return a + b;
-};
-
