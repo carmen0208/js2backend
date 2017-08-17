@@ -10,12 +10,26 @@ it('should add two numbers', () => {
     expect(res).toBe(44).toBeA('number');
 });
 
+it ('should async add two number', (done) => {
+    utils.asyncAdd(33,11,(sum) => {
+        expect(sum).toBe(44).toBeA('number');
+        //this is how mocha knows about async function
+        done();
+    });
+})
 it('should square a number', () => {
     var res = utils.square(4);
     // if (res !== 16) {
     //     throw new Error(`Expect 16, but got ${res}`);
     // }
     expect(res).toBe(16).toBeA('number');
+});
+
+it('should async square a number', (done)=> {
+    utils.asyncSquare(4, (square) => {
+        expect(square).toBe(16).toBeA('number')
+        done();
+    })
 });
 
 it('should set firstName and lastName', () => {
