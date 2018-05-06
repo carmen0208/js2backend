@@ -14,7 +14,7 @@ app.get('/users', (req,res) => {
         name: 'carmen',
         age: 5
     },{
-        name: 'bette',
+        name: 'nico',
         age: 4
     },{
         name: 'somebody',
